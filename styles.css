@@ -1,0 +1,54 @@
+:root {
+	--grey: rgba(209, 209, 209, 1);
+	--yellow: rgba(234, 217, 76, 1);
+	--purple: rgba(59, 53, 97, 1);
+	--red: rgba(221, 115, 115, 1);
+	--teal: rgba(81, 163, 163, 1);
+	--nav-height: 40px;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	font-family: sans-serif;
+	grid-template-rows: 40px 1fr;
+	grid-template-areas:
+		"nav"
+		"content"
+}
+
+nav {
+	padding-left: 16px;
+	grid-area: nav;
+	display: flex;
+	align-items: center;
+	background-color: var(--red);
+	color: var(--yellow);
+}
+
+nav > * {
+	padding-right: 16px;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav li {
+	list-style: none;
+	display: inline;
+	padding-right: 16px;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--grey);
+}
+
+main.content {
+	padding: 20px;
+	min-height: calc(100vh - var(--nav-height));
+	grid-area: content;
+	background-color: var(--teal);
+	color: aliceblue;
+}
